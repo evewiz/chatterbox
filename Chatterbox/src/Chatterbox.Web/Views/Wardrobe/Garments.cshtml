@@ -1,0 +1,17 @@
+﻿@using Chatterbox.Web.ViewModels
+@using System.Collections.Generic
+
+@model IEnumerable<GarmentViewModel>
+
+@{
+    ViewData["Title"] = "Wardrobe";
+}
+
+<div class="row">
+    @foreach (var garment in Model)
+    {
+        <div class="col-md-2 col-sm-4">
+            <img src="/Garment/Download/@garment.GarmentId" class="img-responsive" />
+        </div>
+    }
+</div>

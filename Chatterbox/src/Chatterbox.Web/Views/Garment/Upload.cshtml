@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "New Garment";
+}
+
+<form method="post" asp-controller="Garment" asp-action="Upload" enctype="multipart/form-data">
+    <input type="file" name="files" multiple />
+    <input type="submit" value="Upload" />
+</form>

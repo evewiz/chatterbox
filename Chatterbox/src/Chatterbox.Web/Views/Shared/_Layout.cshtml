@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Chatterbox</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/timeline.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default" style="margin: 0;">
+            <ul class="nav navbar-nav">
+                <li><a href="">Chatterbox</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <div class="row">
+            <div class="col-md-2">
+                <nav class="navbar navbar-default">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a asp-controller="Garment" asp-action="Upload"><i class="fa fa-cloud-upload"></i> Garment</a></li>
+                        <li><a asp-controller="Wardrobe" asp-action="Garments"><i class="fa fa-list"></i> Wardrobe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <div id="content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="panel-footer">
+        <i class="fa fa-copyright"></i> 2016 Chatterbox
+    </footer>
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+</body>
+</html>

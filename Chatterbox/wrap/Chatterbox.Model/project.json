@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net46": {
+      "wrappedProject": "../../src/Chatterbox.Model/Chatterbox.Model.csproj",
+      "bin": {
+        "assembly": "../../src/Chatterbox.Model/obj/{configuration}/Chatterbox.Model.dll",
+        "pdb": "../../src/Chatterbox.Model/obj/{configuration}/Chatterbox.Model.pdb"
+      },
+      "dependencies": {
+        "EntityFramework": "6.1.3",
+        "EntityFramework.SqlServer": "1.0.0-*"
+      }
+    }
+  }
+}
